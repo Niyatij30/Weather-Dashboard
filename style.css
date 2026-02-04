@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:url("assets/bg.jpeg") center/cover no-repeat fixed;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+/* Dark glass overlay */
+body::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.35);
+    backdrop-filter:blur(10px);
+}
+
+/* MAIN CARD */
+.main-container{
+    position:relative;
+    z-index:1;
+    width:340px;
+    padding:22px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(25px);
+    box-shadow:0 10px 40px rgba(0,0,0,0.5);
+    color:white;
+}
+
+/* SEARCH BAR */
+.input-container{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.city-input{
+    flex:1;
+    padding:12px 16px;
+    border-radius:25px;
+    border:none;
+    outline:none;
+    font-size:14px;
+    background:rgba(255,255,255,0.2);
+    color:white;
+}
+
+.city-input::placeholder{
+    color:rgba(255,255,255,0.7);
+}
+
+.search-btn{
+    padding:12px 16px;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+    background:white;
+    color:black;
+    font-weight:600;
+}
+
+/* MESSAGE SECTION */
+.section-message{
+    text-align:center;
+    margin-top:15px;
+}
+
+.section-message img{
+    width:140px;
+    opacity:0.9;
+}
+
+/* WEATHER INFO */
+.weather-info{
+    margin-top:18px;
+    text-align:center;
+}
+
+/* Big icon */
+.weather-summary-img{
+    width:110px;
+    margin:15px auto;
+}
+
+/* Temperature */
+.weather-info h1{
+    font-size:42px;
+    font-weight:600;
+}
+
+.weather-info h2{
+    font-size:20px;
+    font-weight:400;
+    margin-bottom:10px;
+}
+
+/* Humidity & Wind */
+.weather-info p{
+    font-size:14px;
+    opacity:0.9;
+}
+
+/* FORECAST SCROLL */
+.forecast-items-container{
+    display:flex;
+    gap:14px;
+    overflow-x:auto;
+    margin-top:18px;
+    padding-bottom:8px;
+}
+
+.forecast-items-container::-webkit-scrollbar{
+    height:6px;
+}
+
+.forecast-items-container::-webkit-scrollbar-thumb{
+    background:rgba(255,255,255,0.4);
+    border-radius:10px;
+}
+
+/* Forecast cards */
+.forecast-item{
+    min-width:75px;
+    background:rgba(255,255,255,0.15);
+    padding:10px;
+    border-radius:14px;
+    text-align:center;
+    backdrop-filter:blur(10px);
+}
+
+.forecast-item img{
+    width:36px;
+    margin:6px 0;
+}

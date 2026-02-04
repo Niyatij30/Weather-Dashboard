@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<main class="main-container">
+
+    <header class="input-container">
+        <input class="city-input" placeholder="Search City" type="text">
+        <button class="search-btn">Search</button>
+    </header>
+
+    <!-- SEARCH MESSAGE -->
+    <section class="search-city section-message">
+        <img src="assets/message/search-city.png">
+        <h4 class="regular-txt">Find out the weather of any city</h4>
+    </section>
+
+    <!-- NOT FOUND -->
+    <section class="not-found section-message" style="display:none;">
+        <img src="assets/message/not-found.png">
+        <h4 class="regular-txt">City Not Found</h4>
+    </section>
+
+    <!-- WEATHER INFO -->
+    <section class="weather-info" style="display:none;">
+        <h2 class="country-txt"></h2>
+        <h1 class="temp-txt"></h1>
+        <h3 class="condition-txt regular-txt"></h3>
+
+        <div class="condition-info">
+            <p>Humidity: <span class="humidity-value-txt"></span></p>
+            <p>Wind: <span class="wind-value-txt"></span></p>
+        </div>
+
+        <img class="weather-summary-img">
+
+        <div class="forecast-items-container"></div>
+    </section>
+
+</main>
+</body>
+</html>
